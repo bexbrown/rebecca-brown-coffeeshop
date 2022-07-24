@@ -4,18 +4,17 @@
 .button {
     width: 11em;
     height: 3em;
-    position: absolute;
+
 
     &__border {
+        width: 11rem;
+        height: 3rem;
         border: solid 2px $graphite;
-        @extend .button;
         top: -5px;
         left: -5px;
-    }
+        position: absolute;
 
-    &__border:active {
-        top: 0;
-        left: 0;
+
     }
 
     &__link {
@@ -23,16 +22,22 @@
         text-transform: uppercase;
         width: 11em;
         height: 3em;
+        z-index: 2;
+        position: absolute;
+    }
+
+    &__border:active {
+        top: 0;
+        left: 0;
+    }
+
+    &__text-box {
+        width: 11em;
+        height: 3em;
         background-color: $nitro-blue;
         color: $white;
         display: flex;
-        align-items: center;
         justify-content: center;
-
+        align-items: center;
     }
-
-    &__text {
-        padding: auto 0;
-    }
-
 }

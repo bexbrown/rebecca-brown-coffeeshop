@@ -7,7 +7,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -57,19 +56,17 @@ body {
   padding: 0 0.75em;
 }
 
-.button, .button__border {
+.button {
   width: 11em;
   height: 3em;
-  position: absolute;
 }
 .button__border {
+  width: 11rem;
+  height: 3rem;
   border: solid 2px #393939;
   top: -5px;
   left: -5px;
-}
-.button__border:active {
-  top: 0;
-  left: 0;
+  position: absolute;
 }
 .button__link {
   text-decoration: none;
@@ -77,14 +74,21 @@ body {
   text-transform: uppercase;
   width: 11em;
   height: 3em;
+  z-index: 2;
+  position: absolute;
+}
+.button__border:active {
+  top: 0;
+  left: 0;
+}
+.button__text-box {
+  width: 11em;
+  height: 3em;
   background-color: #5BACC3;
   color: #FFFFFF;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-.button__text {
-  padding: auto 0;
+  align-items: center;
 }
 
 .about {
