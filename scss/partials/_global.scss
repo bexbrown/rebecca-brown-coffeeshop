@@ -1,54 +1,5 @@
-/* colors */
-$nitro-blue: #5BACC3;
-$nitro-pink: #FFF0ED;
-$graphite: #393939;
-$white: #FFFFFF;
-$gray: #909090;
-$light-gray: #F7F7F7;
-
-/*font*/
-$font-stack: 'Open Sans';
-
-// font-size
-@mixin heading {
-    font-size: 4rem;
-    font-weight: 300;
-}
-
-@mixin subheading {
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-@mixin link {
-    font-size: 1.5rem;
-    font-weight: 400;
-
-}
-
-@mixin paragraph-italic {
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: italic;
-}
-
-@mixin paragraph {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-@mixin discount-text {
-    font-size: 3rem;
-    font-weight: 400;
-}
-
-// reset default link+list styling
-@mixin link-style {
-    text-decoration: none;
-    list-style: none;
-}
-
-
+@use "./colors.scss" as *;
+@use "./fonts.scss" as *;
 
 *,
 *::before,
@@ -67,69 +18,47 @@ body {
     width: 100%;
     color: $graphite;
 
+
 }
 
 .navigation {
     background-color: $nitro-pink;
-}
-
-
-.navigation__link {
-    color: $graphite;
-}
-
-.navigation__link--selected {
-    color: $nitro-blue;
-}
-
-.navigation__title,
-.footer-card__title {
-    @include subheading;
-}
-
-.navigation__list {
-    @include link;
-    @include link-style;
-}
-
-.navigation__item,
-.about__text,
-.footer-card__text,
-.menu-item__description {
-    @include paragraph;
-}
-
-
-.navigation__link,
-.navigation__item {
-    text-decoration: none;
-}
-
-.navigation,
-.navigation__container,
-.navigation__link,
-.navigation__list {
     display: flex;
-}
-
-.navigation {
     padding: 1em;
     justify-content: space-between;
-}
 
-.navigation__container {
-    align-items: center;
-}
+    &__container {
+        display: flex;
+        align-items: center;
+    }
 
-.navigation__image {
-    margin-left: 1em;
-}
+    &__link {
+        @include link-style;
+        color: $graphite;
+        display: flex;
+    }
 
+    &__link--selected {
+        color: $nitro-blue;
+    }
 
-.navigation__item {
-    padding: 0 0.75em;
-}
+    &__image {
+        width: 3rem;
+        margin-left: 1em;
+    }
 
-.navigation__image {
-    width: 3rem;
+    &__title {
+        @include subheading;
+    }
+
+    &__list {
+        @include link;
+        display: flex;
+    }
+
+    &__item {
+        @include paragraph;
+        @include link-style;
+        padding: 0 0.75em;
+    }
 }

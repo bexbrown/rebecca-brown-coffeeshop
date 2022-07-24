@@ -1,261 +1,203 @@
 @use "./partials/global" as *;
+@use "./partials/fonts" as *;
+@use "./partials/colors" as *;
+@use "./partials/buttons" as *;
 
-.navigation,
-.about-container,
-.product-card__container,
-.footer {
+
+.about {
     background-color: $nitro-pink;
-}
-
-.about-card__button,
-.product-card__button,
-.learn__button,
-.discount__text {
-    color: $white;
-}
-
-.product-card__price,
-.menu-card__price {
-    color: $nitro-blue;
-}
-
-.section-heading,
-.learn__title,
-.about-card__title {
-    @include heading;
-}
-
-.product-card__title,
-.product-card__price {
-    @include subheading;
-}
-
-.about-container,
-.about-card {
     width: 100%;
-}
-
-.about-container,
-.product-container,
-.product-card__container,
-.learn-section,
-.learn__icon-container,
-.learn-card--image,
-.footer {
     display: flex;
-}
-
-.about-container {
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
 
-.about-card {
-    margin-bottom: 2em;
-}
+    &__card {
+        width: 25%;
+        margin-bottom: 2em;
+    }
 
-
-.about-card--text {
-    margin-left: 6em;
-}
-
-.about-card__text {
-    width: 75%;
-    padding: 1em 0;
-    margin-bottom: 1em;
-}
-
-.about-card__image {
-    height: 60vh;
-    padding-left: 30%;
-}
-
-.button-div {
-    display: flex;
-    justify-content: center;
-}
-
-.button {
-    position: relative;
-    height: 3em;
-    width: 11em;
+    &__title {
+        @include heading;
+    }
 
 }
 
-.button__border {
-    border: solid 2px $graphite;
-    height: 3em;
-    width: 11em;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 1;
-}
-
-.about-card__button,
-.product-card__button,
-.learn__button {
-    text-transform: uppercase;
-    background-color: $nitro-blue;
-    text-decoration: none;
-    display: inline-block;
-    width: 11em;
-    height: 3em;
-}
-
-.about-card__button,
-.product-card__button,
-.learn__button,
-.section-heading,
-.product-card__title,
-.product-card__price {
-    text-align: center;
-}
-
-.product-card__link {
-    position: absolute;
-    right: 0px;
-}
-
-.product-section {
-    padding: 2em 0 4em 0;
-}
-
-.product-section {
+.product {
     padding-top: 1em;
     background-color: $light-gray;
+    padding: 2em 0 4em 0;
+
+    &__heading {
+        @include heading;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 4em;
+    }
+
+    &-card {
+        width: 20em;
+        border-radius: 10px;
+        box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+        background-color: $white;
+
+        &__container {
+            background-color: $nitro-pink;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 3em 0;
+        }
+
+        &__container--white {
+            background-color: $white;
+        }
+
+        &__image {
+            height: 35vh;
+        }
+
+        &__title {
+            @include subheading;
+            text-align: center;
+            margin: 0;
+        }
+
+        &__description {
+            color: $gray;
+            margin: 0;
+        }
+
+        &__price {
+            @include subheading;
+            text-align: center;
+            color: $nitro-blue;
+        }
+
+    }
 }
 
-.product-container {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4em;
-}
-
-.product-card {
-    width: 20em;
-    border-radius: 10px;
-    box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
-
-}
-
-.product-card__container {
-    align-items: center;
-    justify-content: space-around;
-    padding: 3em 0;
-}
-
-.product-card__image {
-    height: 35vh;
-}
-
-.product-card__title {
-    margin: 0;
-}
-
-.product-card__description {
-    color: $gray;
-    margin: 0;
-}
-
-.product-card__button {
-    margin-left: 7rem;
-}
-
-
-.learn-section {
+.learn {
     width: 90%;
     margin: 7em auto 0 auto;
     align-items: center;
     justify-content: space-between;
-}
-
-.product-card,
-.product-card__container--white,
-.discount,
-.learn-section {
     background-color: $white;
+    display: flex;
+
+    &__card--text {
+        width: 440px;
+        align-self: flex-start;
+    }
+
+    &__title {
+        @include heading;
+    }
+
+
+    &-icon-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        width: 3rem;
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+
+    &-right {
+        position: relative;
+    }
+
+    &__border {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border: 5px solid $nitro-blue;
+        position: absolute;
+        top: -20px;
+        right: 20px;
+    }
+
+    &__card--image {
+        background-image: url("../../assets/images/coldbrewbackground.png");
+        width: 400px;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        height: 60%;
+    }
+
+    &-right:hover {
+        .learn__image {
+            animation: rotation 2s infinite linear;
+        }
+
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+
 }
 
 
-.learn-card--image {
-    width: 400px;
-    height: 400px;
-}
-
-.learn-card--text {
-    width: 440px;
-    align-self: flex-start;
-}
-
-.learn__icon-container {
-    justify-content: space-between;
-}
-
-.learn__icon {
-    width: 3rem;
-    margin-top: 1em;
-    margin-bottom: 3em;
-}
-
-.learn-right {
-    position: relative;
-}
-
-.learn-border {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    border: 5px solid #5BACC3;
-    position: absolute;
-    top: -20px;
-    right: 20px;
-
-}
-
-.learn-card--image {
-    background-image: url(../assets/images/coldbrewbackground.png);
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-    width: 400px;
-    justify-content: center;
-    align-items: center;
-}
-
-.learn__image {
-    height: 17em;
-}
 
 .discount {
     padding: 2em 0 6em 0;
+    background-color: $white;
+
+    &__text {
+        @include discount-text;
+        max-width: 90%;
+        background-color: $graphite;
+        padding: 1em;
+        margin: 2em auto;
+        color: $white;
+    }
 }
 
-.discount__text {
-    font-size: 3rem;
-    max-width: 90%;
-    background-color: #393939;
-    padding: 1em;
-    margin: 2em auto;
-}
 
 .footer {
     padding: 3em 0;
+    display: flex;
     justify-content: space-evenly;
-}
+    background-color: $nitro-pink;
 
-.footer-card {
-    width: 20%;
-}
+    &__card {
+        width: 20%;
+    }
 
-.footer-card__text {
-    margin: 0;
-}
+    &__title {
+        @include subheading;
+    }
 
-.footer-card__image {
-    width: 3rem;
-}
+    &__text {
+        margin: 0;
+    }
 
-.footer__link {
-    text-decoration: none;
+    &__image {
+        width: 3rem;
+    }
+
+    &__link {
+        @include link-style;
+    }
 }
