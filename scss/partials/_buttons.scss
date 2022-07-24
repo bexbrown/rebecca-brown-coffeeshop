@@ -4,15 +4,17 @@
 .button {
     width: 11em;
     height: 3em;
+    position: absolute;
 
 
     &__border {
         width: 11rem;
         height: 3rem;
         border: solid 2px $graphite;
+        position: absolute;
         top: -5px;
         left: -5px;
-        position: absolute;
+
 
 
     }
