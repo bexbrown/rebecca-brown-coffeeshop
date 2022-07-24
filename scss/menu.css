@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,7 +67,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.hero__title {
+.hero__border {
   width: 17rem;
   height: 11rem;
   border: 5px solid #5BACC3;
@@ -78,12 +79,13 @@ body {
   font-weight: 300;
   width: 17rem;
   height: 11rem;
-  text-align: center;
   position: relative;
   top: 10px;
   left: 10px;
   color: #FFFFFF;
   background-color: #393939;
+  text-align: center;
+  padding-top: 0.5em;
 }
 
 .menu-navigation {

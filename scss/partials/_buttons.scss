@@ -13,6 +13,11 @@
         left: -5px;
     }
 
+    &__border:active {
+        top: 0;
+        left: 0;
+    }
+
     &__link {
         @include link-style;
         text-transform: uppercase;
@@ -20,43 +25,14 @@
         height: 3em;
         background-color: $nitro-blue;
         color: $white;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     &__text {
-        width: 11em;
-        height: 3em;
+        padding: auto 0;
     }
 
 }
-
-
-// .button {
-//     @include
-//     position: relative;
-//     height: 3em;
-//     width: 11em;
-
-//     &__border {
-//         border: solid 2px $graphite;
-//         height: 3em;
-//         width: 11em;
-//         position: absolute;
-//         bottom: 5px;
-//         right: 5px;
-//         z-index: 1;
-//     }
-
-//     &__link {
-//         @include link-style;
-//     }
-
-//     &__text {
-//         @include link;
-//         color: $white;
-//         text-transform: uppercase;
-//         background-color: $nitro-blue;
-//         text-decoration: none;
-//         display: inline-block;
-//     }
-// }
