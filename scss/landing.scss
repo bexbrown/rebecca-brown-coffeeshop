@@ -1,7 +1,9 @@
-@use "./partials/global" as *;
-@use "./partials/fonts" as *;
-@use "./partials/colors" as *;
-@use "./partials/buttons" as *;
+@use "partials/global" as *;
+@use "partials/colors" as *;
+@use "partials/fonts" as *;
+@use "partials/buttons" as *;
+
+
 
 
 .about {
@@ -98,6 +100,10 @@
         @include heading;
     }
 
+    &__text {
+        @include paragraph;
+    }
+
 
     &-icon-container {
         display: flex;
@@ -171,6 +177,26 @@
         padding: 1em;
         margin: 2em auto;
         color: $white;
+        animation: background-color 2.5s linear infinite;
+    }
+
+    &__text--bold {
+        @include discount-text-bold;
+
+    }
+
+    @keyframes background-color {
+        0% {
+            background-color: $graphite;
+        }
+
+        50% {
+            background-color: $nitro-blue;
+        }
+
+        100% {
+            background-color: $graphite;
+        }
     }
 }
 
@@ -180,6 +206,24 @@
     display: flex;
     justify-content: space-evenly;
     background-color: $nitro-pink;
+
+    &__background-icon {
+        background-image: url(../assets/images/coffee-beans.svg);
+        height: 100px;
+        width: 100px;
+        opacity: 25%;
+        position: absolute;
+    }
+
+    &__background-icon--left {
+        left: -2em;
+
+    }
+
+
+    &__background-icon--right {
+        right: -2em;
+    }
 
     &__card {
         width: 20%;
@@ -191,6 +235,10 @@
 
     &__text {
         margin: 0;
+    }
+
+    &__text--bold {
+        @include paragraph-bold;
     }
 
     &__image {

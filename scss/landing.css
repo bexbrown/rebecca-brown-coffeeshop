@@ -56,6 +56,31 @@ body {
   padding: 0 0.75em;
 }
 
+.button, .button__border {
+  width: 11em;
+  height: 3em;
+  position: absolute;
+}
+.button__border {
+  border: solid 2px #393939;
+  top: -5px;
+  left: -5px;
+}
+.button__link {
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  width: 11em;
+  height: 3em;
+  background-color: #5BACC3;
+  color: #FFFFFF;
+  display: block;
+}
+.button__text {
+  width: 11em;
+  height: 3em;
+}
+
 .about {
   background-color: #FFF0ED;
   width: 100%;
@@ -140,6 +165,10 @@ body {
   font-size: 4rem;
   font-weight: 300;
 }
+.learn__text {
+  font-size: 1rem;
+  font-weight: 400;
+}
 .learn-icon-container {
   display: flex;
   justify-content: space-between;
@@ -207,6 +236,34 @@ body {
   padding: 1em;
   margin: 2em auto;
   color: #FFFFFF;
+  -webkit-animation: background-color 2.5s linear infinite;
+          animation: background-color 2.5s linear infinite;
+}
+.discount__text--bold {
+  font-size: 3rem;
+  font-weight: 700;
+}
+@-webkit-keyframes background-color {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
+@keyframes background-color {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
 }
 
 .footer {
@@ -214,6 +271,19 @@ body {
   display: flex;
   justify-content: space-evenly;
   background-color: #FFF0ED;
+}
+.footer__background-icon {
+  background-image: url(../assets/images/coffee-beans.svg);
+  height: 100px;
+  width: 100px;
+  opacity: 25%;
+  position: absolute;
+}
+.footer__background-icon--left {
+  left: -2em;
+}
+.footer__background-icon--right {
+  right: -2em;
 }
 .footer__card {
   width: 20%;
@@ -224,6 +294,10 @@ body {
 }
 .footer__text {
   margin: 0;
+}
+.footer__text--bold {
+  font-size: 1rem;
+  font-weight: 700;
 }
 .footer__image {
   width: 3rem;

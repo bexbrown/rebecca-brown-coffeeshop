@@ -1,4 +1,35 @@
-//buttons 
+@use "colors" as *;
+@use "fonts" as *;
+
+.button {
+    width: 11em;
+    height: 3em;
+    position: absolute;
+
+    &__border {
+        border: solid 2px $graphite;
+        @extend .button;
+        top: -5px;
+        left: -5px;
+    }
+
+    &__link {
+        @include link-style;
+        text-transform: uppercase;
+        width: 11em;
+        height: 3em;
+        background-color: $nitro-blue;
+        color: $white;
+        display: block;
+    }
+
+    &__text {
+        width: 11em;
+        height: 3em;
+    }
+
+}
+
 
 // .button {
 //     @include

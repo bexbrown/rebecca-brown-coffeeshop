@@ -27,9 +27,19 @@ $font-stack: 'Open Sans';
     font-weight: 400;
 }
 
+@mixin paragraph-bold {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 @mixin discount-text {
     font-size: 3rem;
     font-weight: 400;
+}
+
+@mixin discount-text-bold {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 
