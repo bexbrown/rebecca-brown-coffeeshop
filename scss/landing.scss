@@ -14,12 +14,17 @@
     align-items: center;
 
     &__card {
-        width: 25%;
+        width: 30%;
         margin-bottom: 2em;
     }
 
     &__title {
         @include heading;
+    }
+
+    &__text {
+        width: 80%;
+        padding: 1.5em 0;
     }
 
 }
@@ -82,6 +87,13 @@
 
     }
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3em;
+}
+
 
 .learn {
     width: 90%;

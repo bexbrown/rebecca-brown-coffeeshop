@@ -89,12 +89,16 @@ body {
   align-items: center;
 }
 .about__card {
-  width: 25%;
+  width: 30%;
   margin-bottom: 2em;
 }
 .about__title {
   font-size: 4rem;
   font-weight: 300;
+}
+.about__text {
+  width: 80%;
+  padding: 1.5em 0;
 }
 
 .product {
@@ -147,6 +151,12 @@ body {
   font-weight: 300;
   text-align: center;
   color: #5BACC3;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
 }
 
 .learn {
